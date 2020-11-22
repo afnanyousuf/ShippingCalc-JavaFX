@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="212.0" prefWidth="312.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testing_controller.TestingController">
+    <children>
+        <Label text="Enter Weight of Package (kg): " />
+        <TextField fx:id="txtPackWeight" promptText="Weight Of Package" />
+      <Label prefHeight="17.0" prefWidth="304.0" text="Location:" textAlignment="CENTER" />
+      <RadioButton alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="98.0" selected="true" text="Canada" userData="canada">
+         <toggleGroup>
+            <ToggleGroup fx:id="Location" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton mnemonicParsing="false" prefHeight="18.0" prefWidth="99.0" text="      USA" toggleGroup="$Location" userData="USA" />
+      <RadioButton layoutX="117.0" layoutY="116.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="101.0" text="International" toggleGroup="$Location" userData="intl">
+      </RadioButton>
+        
+        <CheckBox fx:id="chkExpressShip" text="Express Shipping" style="-fx-padding: 5 0 5 0;"/>
+         
+        <Button fx:id="btnCalculate" maxWidth="Infinity" mnemonicParsing="true" onAction="#Calculate" text="Calculate Shipping Cost" />
+        <Label fx:id="lblOutput" />
+    </children>
+</VBox>
